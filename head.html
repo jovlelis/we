@@ -1,0 +1,270 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style/gen.css">
+<style>
+body{
+  padding-bottom: 1200px;
+}
+
+.top-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .6s;
+  padding: 40px 30px;
+  height: 70px;
+  background: #209797;
+  box-shadow: 3px 3px 5px grey;
+}
+.top-header.sticky{
+  top: 0;
+}
+.left-section{
+  width: 360px;
+  text-align:center;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  margin: 5px 0;
+}
+.logo-pic{
+  width: 70px;
+  float: left;
+  margin-right: 5px;
+}
+.logo{
+  font-weight: 700;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.middle-section{
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0;
+}
+.search-bar::placeholder {
+  font-size: 16px;
+}
+.search-button {
+  height: 38px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+}
+.search-button,
+.voice-search-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search-button .tooltip,
+.voice-search-button .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip{
+  opacity: 1;
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(rgba(0,0,0,.3),transparent);
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+.search-button,
+.voice-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip {
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip{
+  opacity: 1;
+}
+
+.right-section{
+  width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.right-section .fas{
+  color: #000;
+}
+.right-section a{
+  font-size: 16px;
+  word-spacing: 3px;
+  color: #fff;
+}
+.user-pic{
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav{
+  position: fixed;
+  margin-top: 80;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .6s;
+  padding: 40px 30px;
+  height: 70px;
+  background: #209797;
+  box-shadow: 3px 3px 5px grey;
+  border-top: .5px solid rgb(155, 154, 154);
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+.nav.stick{
+  margin-top: 80px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.nav ul{
+  padding: 2px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+.nav ul a{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav ul a:hover{
+  font-weight: 900;
+  color: #000;
+}
+</style>
+
+<div class="head">
+  <div class="top-header">
+    <div class="left-section">
+        <img class="logo-pic" src="images/logo.png" alt="">
+        <a class="logo">3J's Care Pharmacy</a>
+    </div>
+    
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+        <div class="tooltip">Search</div>
+      </button>
+      <button class="voice-search-button">
+        <i class="fas fa-microphone"></i>
+        <div class="tooltip">Search with your voice</div>
+      </button>
+    </div>
+
+
+    <div class="right-section">
+      <a href="tel:63+ 9076696013" class="no"><i class="fas fa-phone"></i> 63+ 9076696013</a>
+      <a class="shop-icon" href="productpage.html" target="_blank"><i class="fas fa-cart-shopping"></i></a>
+      <img src="images/logo.png" class="user-pic" onclick="toggleMenu()">
+    </div>
+  </div>
+  <div class="nav">
+            
+    <ul>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.addEventListener("scroll",function(){
+    var header = document.querySelector(".top-header");
+    var nav = document.querySelector(".nav");
+    nav.classList.toggle("stick",window.scrollY > 0);
+
+    header.classList.toggle("sticky",window.scrollY > 0);
+  })
+
+ 
+</script>

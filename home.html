@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>3J's Care Pharmacy</title>
+
+    <link rel="stylesheet" href="gen.css">
+    <link rel="stylesheet" href="style/home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        $('header').load("head.html");
+        $('footer').load("footer.html");
+      });
+    </script>
+  </head>
+  <body>
+    <header></header>
+
+    <section class="banner">
+      <div class="contact-bg">
+        <h3>Welcome</h3>
+        <h2>3J's Care Pharmacy</h2>
+        <div class="line">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p class="par">
+          "Dito ka sa aming pharmacy pangangalagaan ka namin"</p>
+        <div class="banner-btn">
+         <a href="productpage.html"><span></span>Products</a>
+         <a href="aboutpage.html"><span></span>Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home">
+      <div class="best-seller">
+        <div class="Best">
+          <h3>OUR</h3>
+          <h2>BEST SELLER</h2>
+        </div>
+          
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img class="best-img" src="images/images/mask.png" >
+            <div class="text">Surgical mask</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="best-img" src="images/images/alcohol.png">
+            <div class="text">Alcohol</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="best-img" src="images/images/gloves.webp">
+            <div class="text">Surgical gloves</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <img class="best-img" src="images/images/biogesic.png">
+            <div class="text">biogesic</div>
+          </div>
+    </section>
+
+    <section class="brand-area">
+      <div class="best-seller">
+        <div class="Best">
+          <h3>SHOP BY</h3>
+          <h2>BRANDS</h2>
+        </div>
+      <div class="brands">
+        <div class="brand"><img src="images/brand/b1.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b2.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b3.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b4.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b5.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b6.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b7.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b8.png" alt=""></div> 
+        <div class="brand"><img src="images/brand/b9.png" alt=""></div>
+        <div class="brand"><img src="images/brand/b10.png"  alt=""></div> 
+      </div>
+    </section>
+
+    <footer><footer>
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+  </body>
+</html>
